@@ -1,0 +1,29 @@
+{
+    "name": "minimal-astro",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "lint": "prettier . --write"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724",
+    "dependencies": {
+        "@astrojs/react": "^3.6.2",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "astro": "^4.16.7",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-astro": "^0.14.1"
+    }
+}

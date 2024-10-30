@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@layouts/base.astro";
+import LoginForm from "@components/forms/login";
+---
+
+<BaseLayout>
+    <h2>Login Page</h2>
+    <a href="/"> Back </a>
+    <LoginForm client:load />
+</BaseLayout>

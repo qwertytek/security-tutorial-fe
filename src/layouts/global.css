@@ -1,0 +1,50 @@
+h2 {
+    color: orange;
+}
+
+/* === Base Layout === */
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+/* === Tablet (768px and up) === */
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+}
+/* === Desktop (1200px and up) === */
+@media (min-width: 1200px) {
+    .container {
+        padding: 2rem 4rem;
+    }
+}
+/* === Large Desktop (1400px and up) === */
+@media (min-width: 1400px) {
+    .container {
+        padding: 2rem 6rem;
+    }
+}
+
+/* === Mobile Regular (375px and up) === */
+@media (min-width: 375px) {
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* === Mobile Large (425px and up) === */
+@media (min-width: 425px) {
+    .container {
+        padding: 1.25rem;
+    }
+}
+
+/* === Tablet (768px and up) === */
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+}
