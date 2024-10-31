@@ -18,7 +18,7 @@ export const POST: APIRoute = async ({ request }) => {
         `${import.meta.env.BACKEND_API_BASE_URL}/token`,
         {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded'},
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({
                 username: String(username),
                 password: String(password)
@@ -32,6 +32,5 @@ export const POST: APIRoute = async ({ request }) => {
         return response.json();
     })
 
-
-    return new Response(response);
+    return new Response(JSON.stringify(response));
 };

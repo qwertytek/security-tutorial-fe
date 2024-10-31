@@ -1,9 +1,6 @@
-import { useState } from "react";
 import type { FormEvent } from "react";
 
 export default function LoginForm() {
-    const [responseMessage, setResponseMessage] = useState("");
-
     async function submit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const formData = new FormData(e.target as HTMLFormElement);
@@ -13,12 +10,15 @@ export default function LoginForm() {
             body: formData,
         });
 
-        console.log('response', response)
-
-        const data = await response.json();
-        if (data.message) {
-            setResponseMessage(data.message);
+        if(response.statusText !== 'OK') {
+            throw new Error(`Failed to login: ${response.statusText}`);
         }
+
+        const token = await response.json()['access_token'];
+
+        localStorage.setItem('access_token', token);
+
+        window.location.replace(import.meta.env.BASE_URL)
     }
 
     return (
@@ -28,11 +28,10 @@ export default function LoginForm() {
                 <input type="text" id="name" name="username" required />
             </label>
             <label>
-                Email
+                Password
                 <input type="password" id="password" name="password" required />
             </label>
             <button>Send</button>
-            {responseMessage && <p>{responseMessage}</p>}
         </form>
     );
 }
